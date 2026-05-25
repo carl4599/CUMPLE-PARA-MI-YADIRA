@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feliz cumpleaños ❤️</title>
+
   <style>
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -13,7 +15,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 20px;
     }
@@ -23,18 +25,37 @@
       backdrop-filter: blur(10px);
       padding: 40px 30px;
       border-radius: 25px;
-      max-width: 700px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 850px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      animation: aparecer 1s ease;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.7rem;
       margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 1.1rem;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .heart {
@@ -73,58 +94,120 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
 
     .footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
+      margin-top: 35px;
       opacity: 0.8;
+      font-size: 0.95rem;
     }
+
   </style>
 </head>
+
 <body>
+
   <div class="card">
+
     <h1>Feliz cumpleaños, mi amor ❤️</h1>
 
     <div class="heart">❤</div>
 
     <p>
-      Sé que hoy no puedo estar físicamente contigo,
-      pero quería dejarte un pequeño rincón donde puedas sentir cuánto te amo.
+      Aunque hoy la distancia nos separe,
+      quería dejarte este pequeño rincón
+      para recordarte cuánto significas para mí.
     </p>
 
-    <button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
+    <button onclick="mostrarMensaje()">
+      Haz clic aquí 💌
+    </button>
 
     <div class="hidden-message" id="mensaje">
+
       <p>
-        Gracias por acompañarme incluso en los días difíciles,
-        por entender mi vida como cadete y por seguir conmigo a pesar de la distancia.
+        Gracias por quedarte conmigo incluso en los días difíciles.
+        Gracias por entender mi vida como cadete,
+        por acompañarme a la distancia
+        y por seguir haciéndome feliz incluso desde lejos.
       </p>
 
       <p>
-        Tal vez hoy no pueda darte un abrazo,
-        pero quiero que recuerdes algo:
+        Tal vez hoy no pueda abrazarte,
+        pero quiero que nunca olvides algo:
         eres una de las personas más importantes de mi vida.
       </p>
 
       <p>
-        Prometo compensarte cada cumpleaños que la distancia nos robe.
+        Prometo compensarte cada cumpleaños
+        que la distancia intente robarnos.
       </p>
 
       <h2>Te amo muchísimo ❤️</h2>
+
     </div>
 
-    <div class="footer">
-      Hecho con amor por tu cadete favorito.
+    <h2>Nuestros recuerdos ❤️</h2>
+
+    <div class="gallery">
+      <img src="foto1.jpg">
+      <img src="foto2.jpg">
+      <img src="foto3.jpg">
+      <img src="foto4.jpg">
     </div>
+
+    <br>
+
+    <audio id="musica" loop>
+      <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="document.getElementById('musica').play()">
+      Reproducir nuestra canción 🎵
+    </button>
+
+    <div class="footer">
+      Hecho con muchísimo amor por tu cadete favorito ❤️
+    </div>
+
   </div>
 
   <script>
+
     function mostrarMensaje() {
       document.getElementById('mensaje').style.display = 'block';
     }
+
   </script>
+
 </body>
 </html>
