@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz cumpleaños ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      border-radius: 25px;
+      max-width: 700px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: pulse 1.5s infinite;
+      margin: 15px 0;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    button {
+      margin-top: 20px;
+      background: white;
+      color: #ee6072;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 25px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Feliz cumpleaños, mi amor ❤️</h1>
+
+    <div class="heart">❤</div>
+
+    <p>
+      Sé que hoy no puedo estar físicamente contigo,
+      pero quería dejarte un pequeño rincón donde puedas sentir cuánto te amo.
+    </p>
+
+    <button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
+
+    <div class="hidden-message" id="mensaje">
+      <p>
+        Gracias por acompañarme incluso en los días difíciles,
+        por entender mi vida como cadete y por seguir conmigo a pesar de la distancia.
+      </p>
+
+      <p>
+        Tal vez hoy no pueda darte un abrazo,
+        pero quiero que recuerdes algo:
+        eres una de las personas más importantes de mi vida.
+      </p>
+
+      <p>
+        Prometo compensarte cada cumpleaños que la distancia nos robe.
+      </p>
+
+      <h2>Te amo muchísimo ❤️</h2>
+    </div>
+
+    <div class="footer">
+      Hecho con amor por tu cadete favorito.
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
